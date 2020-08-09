@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de {{Cliente}}</title>
+    {% load static %}
+    <!-- Bootstrap -->
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <nav class= "navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" >Proyecto de Facturación</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <l1 class="nav-item active">
+                    <a class="nav-link" href='/'>{{ Menu}}<span class="sr-only">(current)</span></a>
+                </l1>
+                <l1 class="nav-item">
+                    <a class="nav-link" href='/listarfactura'>{{ Ventas }}</a>
+                </l1>
+                <l1 class="nav-item">
+                    <a class="nav-link" href='/listarproducto'>{{ Producto }}</a>
+                </l1>
+                <l1 class="nav-item">
+                    <a class="nav-link" href='/listarcliente'>{{ Cliente }}</a>
+                </l1>
+                <l1 class="nav-item">
+                    <a class="nav-link" href='/admin'>{{ Administracion }}</a>
+                </l1>
+            </ul>
+        </div>
+    </nav>
+    
+</head>
+
+<body>
+
+    <h1>Listado de {{Cliente}}</h1>
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ruc</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Acciones<th>
+            </tr>
+        </thead>
+
+        <body>
+            {% for c in clientes %}
+            <tr>
+                <td>{{ c.id }}</td>
+                <td>{{ c.ruc }}</td>
+                <td>{{ c.nombre }}</td>
+                <td>{{ c.direccion }}</td>
+                <td>
+                    <ul>
+                        <l1><a class="btn btn-success" href="{% url 'cliente' %}">Nuevo</a></l1>
+                        <l1><a class="btn btn-warning" href="{% url 'editarcliente' c.id %}">Editar</a></l1>
+                        <l1><a class="btn btn-danger" href="{% url 'eliminarcliente' c.id %}">Eliminar</a></l1>
+                    </ul>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </body>
+
+    </table>
+</body>
+
+</html>

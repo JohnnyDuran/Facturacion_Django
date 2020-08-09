@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{Menu}}</title>
+    {% load static %}
+    <!-- Bootstrap -->
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <nav class= "navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" >Proyecto de Facturación</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+              <l1 class="nav-item active">
+                  <a class="nav-link" href='/'>{{ Menu}}<span class="sr-only">(current)</span></a>
+              </l1>
+              <l1 class="nav-item">
+                  <a class="nav-link" href='/listarfactura'>{{ Ventas }}</a>
+              </l1>
+              <l1 class="nav-item">
+                  <a class="nav-link" href='/listarproducto'>{{ Producto }}</a>
+              </l1>
+              <l1 class="nav-item">
+                  <a class="nav-link" href='/listarcliente'>{{ Cliente }}</a>
+              </l1>
+              <l1 class="nav-item">
+                  <a class="nav-link" href='/admin'>{{ Administracion }}</a>
+              </l1>
+          </ul>
+      </div>
+  </nav>
+</head>
+
+<body>
+    <h1>{{Menu}}</h1>
+    <!--<ul>
+        <l1><a href='/'>{{ Menu}}</a></l1>
+        <l1><a href='/ventas'>{{ Ventas }}</a></l1>
+        <l1><a href='/producto'>{{ Producto }}</a></l1>
+        <l1><a href='/listarcliente'>{{ Cliente }}</a></l1>
+        <l1><a href='/admin'>{{ Administracion }}</a></l1>
+    </ul> -->
+    <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Administracion</h5>
+              <p class="card-text">Bienvenidos al modulo de Administracion del Proyecto de Facturacion en Django</p>
+              <a href="/admin" class="btn btn-primary">{{ Administracion }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Registro de Ventas</h5>
+              <p class="card-text">Aqui exploraras el conjunto de ventas realizadas en nuestro sistema.</p>
+              <a href="/listarfactura" class="btn btn-primary">{{ Ventas }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Productos</h5>
+                <p class="card-text">Explora nuestro listado de productos a tu disposición.</p>
+                <a href="/listarproducto" class="btn btn-primary">{{ Producto }}</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Clientes</h5>
+                <p class="card-text">Aqui encontraras el listado de clientes registrados en el sistema.</p>
+                <a href="/listarcliente" class="btn btn-primary">{{ Cliente }}</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
+
+  <div style="background-color: #1d1c1f;">
+    <div class="container">
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Proyecto de Facturacion en Django</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Proyecto creado con Python y el Framework de Django con la ayuda en diseño de Boostrap 4.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Desarrolladores</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a>Johnny Duran C.</a>
+        </p>
+        <p>
+          <a>Gabriela Loyola S.</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Correos</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a>johnny@gmail.com</a>
+        </p>
+        <p>
+          <a>gabriela@gmail.com</a>
+        </p>
+        <p>
+          <a>Son solo de presentación los correos ☻</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> Johnny Desings.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</html>
