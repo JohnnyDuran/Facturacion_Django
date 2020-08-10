@@ -9,3 +9,4 @@ Usuario: johnny
 Contraseña: johnny
 
 -------------------------------
+Si tiene inconvenientes con la carga de bootstrap ***Abrirlo en el Navegador Opera
